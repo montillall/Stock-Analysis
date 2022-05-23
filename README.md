@@ -63,17 +63,17 @@ The objective of this work is to refactor the original script, test it with the 
 
 * 4) Loop through your arrays to output the Ticker, Total Daily Volume, and Return.
     
-        For j = 0 To 11
+        	For j = 0 To 11
     
-       Worksheets("All Stocks Analysis").Activate
+       		Worksheets("All Stocks Analysis").Activate
        
-		Cells(4 + j, 1).Value = tickers(j)
-	    
-	Cells(4 + j, 2).Value = tickerVolumes(j)
+       		Cells(4 + j, 1).Value = tickers(j)
 	
-		Cells(4 + j, 3).Value = (tickerEndingPrice(j) / tickerStartingPrice(j)) - 1
+			Cells(4 + j, 2).Value = tickerVolumes(j)
+	
+			Cells(4 + j, 3).Value = (tickerEndingPrice(j) / tickerStartingPrice(j)) - 1
   
-    Next j
+    		Next j
 
 ### Stock Performance and Execution Times
 The results of the analysis showed that DQ stocks dropped about 63% in 2018 and only two stocks (ENPH and RUN) increased their return in 2018. For 2017, most stocks increased their return except TERP with a dropped of 7%. See tables below
