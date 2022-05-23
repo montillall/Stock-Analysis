@@ -81,6 +81,7 @@ The results of the analysis showed that DQ stocks dropped about 63% in 2018 and 
 Link to All Stocks Analysis Spreadsheet
 ![](VBA_Challenge.xlsm)
 
+
 All Stocks 2017 Results
 ![](AllStocks2017_Results.png)
 
