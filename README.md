@@ -78,14 +78,18 @@ The objective of this work is to refactor the original script, test it with the 
 ### Stock Performance and Execution Times
 The results of the analysis showed that DQ stocks dropped about 63% in 2018 and only two stocks (ENPH and RUN) increased their return in 2018. For 2017, most stocks increased their return except TERP with a dropped of 7%. See tables below
 
+All Stocks 2017 Results
+1[](AllStocks2017_Results.png)
+
+
 
 In terms running time, there was an improvement in the script execution time from the original script to the refactored script. Comparing the execution time for year 2018, the improvement was about 88% running time with the refactoring script. See below the pop up messages for the original and refactored scripts
 
-Original Script Pop Up Image
+Original Script Execution Time
 ![](VBA_Challenge_2018_OriginalScript.png)
 
 
-Refactored Script Pop Up Image
+Refactored Script Execution Time
 ![](VBA_Challenge_2018.png)
 
 ---
