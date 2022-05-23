@@ -1,1 +1,1 @@
-# Stock-Analysis
+# Green Stock Analysis Challenge
