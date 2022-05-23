@@ -81,6 +81,8 @@ The results of the analysis showed that DQ stocks dropped about 63% in 2018 and 
 
 In terms running time, there was an improvement in the script execution time from the original script to the refactored script. Comparing the execution time for year 2018, the improvement was about 88% running time with the refactoring script. See below the pop up messages for the original and refactored scripts
 
+Original Script Pop Up Image
+![](VBA_Challenge_2018_OriginalScript.png)
 
 
 Refactored Script Pop Up Image
