@@ -78,6 +78,9 @@ The objective of this work is to refactor the original script, test it with the 
 ### Stock Performance and Execution Times
 The results of the analysis showed that DQ stocks dropped about 63% in 2018 and only two stocks (ENPH and RUN) increased their return in 2018. For 2017, most stocks increased their return except TERP with a dropped of 7%. See tables below
 
+Link to All Stocks Analysis Spreadsheet
+![](VBA_Challenge.xlsm)
+
 All Stocks 2017 Results
 ![](AllStocks2017_Results.png)
 
