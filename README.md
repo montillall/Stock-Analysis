@@ -16,7 +16,7 @@ The objective of this work is to refactor the original script, test it with the 
 ## Results
 
 Link to All Stocks Analysis Spreadsheet
-![](VBA_Challenge.xlsm.zip)
+![](VBA_Challenge.xlsm)
 
 ### Refactored Script Coding
 * 1a) Create a ticker Index variable. This variable holds the index of each of the tickers and it is set to start at zero, since we’ll go through each company (ticker) to do the analysis. The tickerIndex variable will be used to access the correct index across the different arrays (tickers, tickerVolumes, tickersStartingPrice and tickerEndingPrice). Tickers array has been created already, the other 3 arrays are created in 1b.
