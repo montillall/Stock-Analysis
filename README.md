@@ -16,43 +16,53 @@ The objective of this work is to refactor the original script, test it with the 
 ## Results
 
 ### Refactored Script Coding
-1a) Create a ticker Index variable. This variable holds the index of each of the tickers and it is set to start at zero, since we’ll go through each company (ticker) to do the analysis. The tickerIndex variable will be used to access the correct index across the different arrays (tickers, tickerVolumes, tickersStartingPrice and tickerEndingPrice). Tickers array has been created already, the other 3 arrays are created in 1b
+* 1a) Create a ticker Index variable. This variable holds the index of each of the tickers and it is set to start at zero, since we’ll go through each company (ticker) to do the analysis. The tickerIndex variable will be used to access the correct index across the different arrays (tickers, tickerVolumes, tickersStartingPrice and tickerEndingPrice). Tickers array has been created already, the other 3 arrays are created in 1b.
+
     	Dim tickerIndex As Integer 
 		tickerIndex = 0
 
-1b) Created three output arrays. The 3 arrays will have 12 elements which are correspondent to the 12 tickers/companies that each element will be filled with the data of volumes, starting price and ending price
-Dim tickerVolumes(12) As Long
-Dim tickerStartingPrice(12) As Single
-Dim tickerEndingPrice(12) As Single
+* 1b) Created three output arrays. The 3 arrays will have 12 elements which are correspondent to the 12 tickers/companies that each element will be filled with the data of volumes, starting price and ending price.
 
-2a) Created a for loop to initialize the tickerVolumes to zero. “Count” is just another index in this loop to initialize the volumes to zero every time a new ticker/company analysis is complete after going through all the rows for that particular ticker performed in the following loop
-    	For Count = 0 To 11
+	Dim tickerVolumes(12) As Long
+	Dim tickerStartingPrice(12) As Single
+	Dim tickerEndingPrice(12) As Single
+
+* 2a) Created a for loop to initialize the tickerVolumes to zero. “Count” is just another index in this loop to initialize the volumes to zero every time a new ticker/company analysis is complete after going through all the rows for that particular ticker performed in the following loop.
+    	
+	For Count = 0 To 11
         		tickerVolumes(Count) = 0
             	Next Count
 
 
-2b) Created a for loop to go over all the rows in the spreadsheet. This is the loop that will go over each row to get the data for each ticker
-For i = 2 To RowCount
+* 2b) Created a for loop to go over all the rows in the spreadsheet. This is the loop that will go over each row to get the data for each ticker.
 
-3a) Increase volume for current ticker. This will add up the volumes from the volumes column to the current item of the tickerVolume array indicated by the tickertIndex
-tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+	For i = 2 To RowCount
 
-3b) Created an if statement to check if the current row is the first row with the selected ticker then assign the value of the price to the tickerStartingPrice 
-       			 If Cells(i -1, 1).Value <> tickers(tickerIndex) Then
-				tickerStartingPrice(tickerIndex) = Cells(i, 6).Value
-                      		 'End If
+* 3a) Increase volume for current ticker. This will add up the volumes from the volumes column to the current item of the tickerVolume array indicated by the tickertIndex.
 
-3c) Created an if statement to check if the current row is the last row with the selected ticker then assign the value of the price to the tickerEndingPrice 
-           			 If Cells(i + 1, 1).Value <> ticker(tickerIndex)  Then
-				tickerEndingPrice(tickerIndex) = Cells(i, 6).Value
+	tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+
+* 3b) Created an if statement to check if the current row is the first row with the selected ticker then assign the value of the price to the tickerStartingPrice.
+ 
+       	If Cells(i -1, 1).Value <> tickers(tickerIndex) Then
+		tickerStartingPrice(tickerIndex) = Cells(i, 6).Value
+         End If
+
+* 3c) Created an if statement to check if the current row is the last row with the selected ticker then assign the value of the price to the tickerEndingPrice.
+ 
+         If Cells(i + 1, 1).Value <> ticker(tickerIndex)  Then
+		tickerEndingPrice(tickerIndex) = Cells(i, 6).Value
 
 
-3d) Increase the tickerIndex. Since this is a function of knowing of the if statement above in terms that if the next row doesn’t match the current row then increase the tickerIndex to go to the next ticker/company
-			tickerIndex = tickerIndex + 1
-            		'End If
-        	Next i
+* 3d) Increase the tickerIndex. Since this is a function of knowing of the if statement above in terms that if the next row doesn’t match the current row then increase the tickerIndex to go to the next ticker/company.
 
-4) Loop through your arrays to output the Ticker, Total Daily Volume, and Return.
+		tickerIndex = tickerIndex + 1
+           End If
+        	
+	Next i
+
+* 4) Loop through your arrays to output the Ticker, Total Daily Volume, and Return.
+    
     For j = 0 To 11
                Worksheets("All Stocks Analysis").Activate
 	Cells(4 + j, 1).Value = tickers(j)
